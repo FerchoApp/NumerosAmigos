@@ -12,6 +12,8 @@ public class NumerosAmigos {
 
         Scanner scanner = new Scanner(System.in);
 
+        long startTime = System.nanoTime();
+
         
         System.out.print("Introduce el primer número: ");
         int numero1 = scanner.nextInt();
@@ -31,7 +33,11 @@ public class NumerosAmigos {
 
         System.out.println(sumaDivisores1);
         System.out.println(sumaDivisores2);
+        
+        long endTime = System.nanoTime();
 
+      System.out.println("Program took " +
+         (endTime - startTime) + "nanoseconds") ;
     }
     public static int sumaDivisores(int numero1) {
         int suma = 0;
